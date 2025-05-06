@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <form [formGroup]="programmeform" class="w-50 bg-light p-4 rounded shadow">
+    <div class="form-group">
+      <label for="titre">Titre</label>
+      <input type="text" class="form-control" id="titre" formControlName="titre">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="contenu">Contenu</label>
+      <textarea class="form-control" id="contenu" formControlName="contenu"></textarea>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="archive">Archivé</label>
+      <input type="text" class="form-control" id="archive" formControlName="archive">
+    </div>
+    <br>
+
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary"  (click)="updeteProgramme()">Update</button>
+    </div>
+  </form>
+</div>

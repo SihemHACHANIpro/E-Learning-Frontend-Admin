@@ -1,0 +1,55 @@
+<!-- En-tête de page -->
+<h1 class="h3 mb-2 text-gray-800">Tables</h1>
+<p class="mb-4">
+  DataTables is a third party plugin. Visit the
+  <a target="_blank" href="https://datatables.net">official documentation</a>.
+</p>
+
+<!-- Table responsive -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Titre</th>
+            <th>Contenu</th>
+            <th>Archive</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>#</th>
+            <th>Titre</th>
+            <th>Contenu</th>
+            <th>Archive</th>
+
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr *ngFor="let programme of listProgramme; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ programme?.titre }}</td>
+            <td>{{ programme?.contenu }}</td>
+            <td>{{ programme?.archive ? 'Oui' : 'Non' }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteProgramme(programme.id)">Supprimer</button>
+              &nbsp;&nbsp;
+              <button class="btn btn-info" [routerLink]="['/detailsprogramme', programme.id]">Détails</button>
+              &nbsp;&nbsp;
+ 
+
+              <button type="button" class="btn btn-warning" [routerLink]="['/updeteprogramme',programme.id]">Modifier</button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

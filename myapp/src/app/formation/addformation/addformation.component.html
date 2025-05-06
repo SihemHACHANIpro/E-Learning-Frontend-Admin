@@ -1,0 +1,53 @@
+
+
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+
+
+  <form class="form-container"  [formGroup]="formationform" (ngSubmit)="addFormation()" >
+    <div class="form-group mb-2">
+      <label for="titre">Titre</label>
+      <input type="text" class="form-control form-control-sm" id="titre" placeholder="Entrez le titre" formControlName="title">
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="description">Description</label>
+      <textarea class="form-control form-control-sm" id="description" placeholder="Entrez la description" formControlName="description"></textarea>
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="categorie">Catégorie</label>
+      <input type="text" class="form-control form-control-sm" id="categorie" placeholder="Entrez la catégorie" formControlName="categorie">
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="duree">Durée</label>
+      <input type="text" class="form-control form-control-sm" id="duree" placeholder="Entrez la durée" formControlName="duree">
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="dateDebut">Date de début</label>
+      <input type="date" class="form-control form-control-sm" id="dateDebut" formControlName="dateDebut">
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="dateFin">Date de fin</label>
+      <input type="date" class="form-control form-control-sm" id="dateFin" formControlName="dateFin">
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="statut">Statut</label>
+      <input type="text" class="form-control form-control-sm" id="statut" placeholder="Statut (ex: En cours)" formControlName="statut">
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="archivee">Archivée</label>
+      <select class="form-control form-control-sm" id="archivee" formControlName="archive">
+        <option value="true">Oui</option>
+        <option value="false">Non</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-sm w-100" (click)="addFormation()">Ajouter</button>
+  </form>
+</div>
+
