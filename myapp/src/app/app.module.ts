@@ -24,6 +24,26 @@ import { ListSpecialiteComponent } from './specialite/list-specialite/list-speci
 import { DetailSpecialiteComponent } from './specialite/detail-specialite/detail-specialite.component';
 import { UpdeteprogrammeComponent } from './programme/updeteprogramme/updeteprogramme.component';
 import { UpdatesessionComponent } from './session/updatesession/updatesession.component';
+import { UpdatespecialiteComponent } from './specialite/updatespecialite/updatespecialite.component';
+import { ListprojetComponent } from './projetfreelance/listprojet/listprojet.component';
+import { DetailprojetComponent } from './projetfreelance/detailprojet/detailprojet.component';
+import { UpdateprojetComponent } from './projetfreelance/updateprojet/updateprojet.component';
+import { AddprojetComponent } from './projetfreelance/addprojet/addprojet.component';
+import { ListevenementComponent } from './evenement/listevenement/listevenement.component';
+import { DetailevenementComponent } from './evenement/detailevenement/detailevenement.component';
+import { UpdateevenementComponent } from './evenement/updateevenement/updateevenement.component';
+import { AddevenementComponent } from './evenement/addevenement/addevenement.component';
+import { ListPlanificationComponent } from './planification/list-planification/list-planification.component';
+import { DetailPlanificationComponent } from './planification/detail-planification/detail-planification.component';
+import { UpdatePlanificationComponent } from './planification/update-planification/update-planification.component';
+import { AddplanificationComponent } from './planification/addplanification/addplanification.component';
+import { ListrapportComponent } from './rapport/listrapport/listrapport.component';
+import { AddrapportComponent } from './rapport/addrapport/addrapport.component';
+import { UpdaterapportComponent } from './rapport/updaterapport/updaterapport.component';
+import { DetailrapportComponent } from './rapport/detailrapport/detailrapport.component';
+import { AddprogrammeComponent } from './programme/addprogramme/addprogramme.component';
+import { AddsessionComponent } from './session/addsession/addsession.component';
+import { AddspecialiteComponent } from './specialite/addspecialite/addspecialite.component';
 
 @NgModule({
   declarations: [
@@ -44,14 +64,34 @@ import { UpdatesessionComponent } from './session/updatesession/updatesession.co
     ListSpecialiteComponent,
     DetailSpecialiteComponent,
     UpdeteprogrammeComponent,
-    UpdatesessionComponent
+    UpdatesessionComponent,
+    UpdatespecialiteComponent,
+    ListprojetComponent,
+    DetailprojetComponent,
+    UpdateprojetComponent,
+    AddprojetComponent,
+    ListevenementComponent,
+    DetailevenementComponent,
+    UpdateevenementComponent,
+    AddevenementComponent,
+    ListPlanificationComponent,
+    DetailPlanificationComponent,
+    UpdatePlanificationComponent,
+    AddplanificationComponent,
+    ListrapportComponent,
+    AddrapportComponent,
+    UpdaterapportComponent,
+    DetailrapportComponent,
+    AddprogrammeComponent,
+    AddsessionComponent,
+    AddspecialiteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule // ✅ Ajouté ici
+    RouterModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

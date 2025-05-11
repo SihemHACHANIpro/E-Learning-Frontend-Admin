@@ -11,8 +11,8 @@ import { FormationService } from 'src/app/services/formation.service';
 export class UpdateformationComponent {
 
    id!: number;
-    formation: any;
-    formationform!:FormGroup
+  formation: any;
+  formationform!:FormGroup
 
      constructor(
       private activeroute: ActivatedRoute,
@@ -25,7 +25,7 @@ export class UpdateformationComponent {
     title:['',Validators.required],
     description:['',Validators.required],
     categorie :['',Validators.required],
-    duree: [0, Validators.required],    // ✅ 0 au lieu de ''
+    duree: [0, Validators.required],
     dateDebut:['',Validators.required],
     dateFin:['',Validators.required],
     statut:['',Validators.required],

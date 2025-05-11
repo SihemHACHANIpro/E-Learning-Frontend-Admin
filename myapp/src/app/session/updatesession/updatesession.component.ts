@@ -12,8 +12,8 @@ import Swal from 'sweetalert2';
 export class UpdatesessionComponent {
 
   id!: number;
-    session: any;
-    sessionform!:FormGroup;
+  session: any;
+  sessionform!:FormGroup;
 
     constructor(private activeroute: ActivatedRoute,
        private sessionService: SessionService,

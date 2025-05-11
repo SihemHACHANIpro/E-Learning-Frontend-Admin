@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <form [formGroup]="projetfreelanceform" class="w-50 bg-light p-4 rounded shadow">
+
+    <div class="form-group">
+      <label for="titre">Title</label>
+      <input type="text" class="form-control" id="titre" formControlName="title">
+    </div>
+
+    <div class="form-group">
+      <label for="contenu">Description</label>
+      <textarea class="form-control" id="contenu" formControlName="description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="planification">Planification</label>
+      <input type="text" class="form-control" id="planification" formControlName="planification">
+    </div>
+
+    <div class="form-group">
+      <label for="statut">Statut</label>
+      <input type="text" class="form-control" id="statut" formControlName="statut">
+    </div>
+
+    <div class="form-group">
+      <label for="dateDebut">Date Début</label>
+      <input type="text" class="form-control" id="dateDebut" formControlName="dateDebut">
+    </div>
+
+    <div class="form-group">
+      <label for="dateFin">Date Fin</label>
+      <input type="text" class="form-control" id="dateFin" formControlName="dateFin">
+    </div>
+
+    <div class="form-group">
+      <label for="archive">Archivé</label>
+      <input type="text" class="form-control" id="archive" formControlName="archive">
+    </div>
+
+    <div class="form-group text-center mt-3">
+      <button type="button" class="btn btn-primary"  (click)="updateProjet()">Update</button>
+    </div>
+
+  </form>
+</div>

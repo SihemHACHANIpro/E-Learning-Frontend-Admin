@@ -1,0 +1,34 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <form  class="w-50 bg-light p-4 rounded shadow" [formGroup]="sessionform" >
+    <div class="form-group">
+      <label for="titre">dateSession</label>
+      <input type="text" class="form-control" id="titre" formControlName="dateSession">
+    </div>
+    <br>
+
+
+    <div class="form-group">
+      <label for="titre">lieu</label>
+      <input type="text" class="form-control" id="titre" formControlName="lieu">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="titre">statut</label>
+      <input type="text" class="form-control" id="titre" formControlName="statut">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="archive">Archivé</label>
+      <input type="text" class="form-control" id="archive" formControlName="archive">
+    </div>
+    <br>
+<!-- [formGroup]="programmeform"
+ (click)="addProgramme()" -->
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary"  (click)="addSession()">Add</button>
+    </div>
+  </form>
+</div>
+
+

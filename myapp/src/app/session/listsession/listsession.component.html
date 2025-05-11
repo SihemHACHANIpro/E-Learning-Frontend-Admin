@@ -6,6 +6,8 @@
       For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
 
   <!-- DataTales Example -->
+  <button type="button" class="btn btn-primary" routerLink="/addsession" >Ajouter</button>
+  &nbsp;&nbsp;
   <div class="card shadow mb-4">
       <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
@@ -44,8 +46,7 @@
 
                             <button type="button" class="btn btn-info" [routerLink]="['/detailsession',session.id]">Détails</button>
                             &nbsp;&nbsp;
-                            <!-- <button type="button" class="btn btn-warning" [routerLink]="['/updeteprogramme',programme.id]">Modifier</button>
- -->
+
                             <button type="button" class="btn btn-warning" [routerLink]="['/updatesession',session.id]">Update</button>
                           </td>
 

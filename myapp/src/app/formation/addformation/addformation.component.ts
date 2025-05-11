@@ -10,40 +10,38 @@ import Swal from 'sweetalert2';
   styleUrls: ['./addformation.component.css']
 })
 export class AddformationComponent implements OnInit {
-
   formationform!:FormGroup
 
-  /* constructor(private formbuilder: FormBuilder, private formationSevice: FormationService, private router: Router) {}
- */
 constructor(private  formbuilder: FormBuilder,
    private formationService: FormationService,
-   private route: Router
-){}
+   private route: Router){}
 
-  ngOnInit(): void {
+ ngOnInit(): void {
     this.formationform = this.formbuilder.group({
        title:['',Validators.required],
-          description:['',Validators.required],
-          categorie :['',Validators.required],
-          duree: ['' ,Validators.required],
-          dateDebut:['',Validators.required],
-          dateFin:['',Validators.required],
-          statut:['',Validators.required],
-          archive :['',Validators.required]
+       description:['',Validators.required],
+       categorie :['',Validators.required],
+       duree: ['' ,Validators.required],
+       dateDebut:['',Validators.required],
+       dateFin:['',Validators.required],
+       statut:['',Validators.required],
+       archive :['',Validators.required]
     })
-
-
-  }
-  addFormation(){
-
-      this.formationService.addFormation(this.formationform.value).subscribe((res:any)=>{
-        console.log("res.addFormation",res)
-
-
- 
-            Swal.fire("formation add")
-            this.route.navigateByUrl("/listformation")
-      })
   }
 
-}
+addFormation(){
+
+   this.formationService.addFormation(this.formationform.value).subscribe((res:any)=>{
+   console.log("res.addFormation",res)
+
+})
+
+Swal.fire({
+  icon: 'success',
+  title: 'Formation ajoutée avec succès',
+  showConfirmButton: false,
+  timer: 1500
+}).then(() => {
+  this.route.navigateByUrl('/listformation');
+});
+}}

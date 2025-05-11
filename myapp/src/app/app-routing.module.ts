@@ -13,6 +13,24 @@ import { DetailsessionComponent } from './session/detailsession/detailsession.co
 import { ListSpecialiteComponent } from './specialite/list-specialite/list-specialite.component';
 import { UpdeteprogrammeComponent } from './programme/updeteprogramme/updeteprogramme.component';
 import { UpdatesessionComponent } from './session/updatesession/updatesession.component';
+import { DetailSpecialiteComponent } from './specialite/detail-specialite/detail-specialite.component';
+import { UpdatespecialiteComponent } from './specialite/updatespecialite/updatespecialite.component';
+import { ProjetfreelanceService } from './services/projetfreelance.service';
+import { ListprojetComponent } from './projetfreelance/listprojet/listprojet.component';
+import { DetailprojetComponent } from './projetfreelance/detailprojet/detailprojet.component';
+import { UpdateprojetComponent } from './projetfreelance/updateprojet/updateprojet.component';
+import { ListPlanificationComponent } from './planification/list-planification/list-planification.component';
+import { ListrapportComponent } from './rapport/listrapport/listrapport.component';
+import { AddprogrammeComponent } from './programme/addprogramme/addprogramme.component';
+import { AddsessionComponent } from './session/addsession/addsession.component';
+import { AddspecialiteComponent } from './specialite/addspecialite/addspecialite.component';
+import { AddprojetComponent } from './projetfreelance/addprojet/addprojet.component';
+import { DetailPlanificationComponent } from './planification/detail-planification/detail-planification.component';
+import { UpdatePlanificationComponent } from './planification/update-planification/update-planification.component';
+import { DetailrapportComponent } from './rapport/detailrapport/detailrapport.component';
+import { UpdaterapportComponent } from './rapport/updaterapport/updaterapport.component';
+import { AddrapportComponent } from './rapport/addrapport/addrapport.component';
+import { AddplanificationComponent } from './planification/addplanification/addplanification.component';
 
 
 const routes: Routes = [
@@ -26,16 +44,45 @@ const routes: Routes = [
     { path: 'addformation', component: AddformationComponent },
     /* _______________________________________ */
 
-    {path: 'listprogramme',component: ListprogrammeComponent},
-    {path: 'detailsprogramme/:id',component: DetailsprogrammeComponent},
-    {path: 'updeteprogramme/:id',component: UpdeteprogrammeComponent},
+      {path: 'listprogramme',component: ListprogrammeComponent},
+      {path: 'detailsprogramme/:id',component: DetailsprogrammeComponent},
+      {path: 'updeteprogramme/:id',component: UpdeteprogrammeComponent},
+      {path: 'addprogramme',component: AddprogrammeComponent},
 
     /* __________________________________ */
-    {path: 'listsession',component: ListsessionComponent},
-    {path: 'detailsession/:id',component: DetailsessionComponent},
-    {path: 'updatesession/:id',component: UpdatesessionComponent},
+       {path: 'listsession',component: ListsessionComponent},
+      {path: 'detailsession/:id',component: DetailsessionComponent},
+      {path: 'updatesession/:id',component: UpdatesessionComponent},
+      {path: 'addsession',component: AddsessionComponent},
+
     /* ________________________________ */
-    {path: 'list-specialite',component: ListSpecialiteComponent},
+      {path: 'list-specialite',component: ListSpecialiteComponent},
+      {path: 'detail-specialite/:id',component: DetailSpecialiteComponent},
+      {path: 'updatespecialite/:id',component: UpdatespecialiteComponent},
+      {path: 'addspecialite',component: AddspecialiteComponent},
+
+    /* _______________________________________ */
+       {path: 'listprojet',component: ListprojetComponent},
+       {path: 'detailprojet/:id',component: DetailprojetComponent},
+       {path: 'updateprojet/:id',component: UpdateprojetComponent},
+       {path: 'addprojet',component: AddprojetComponent},
+
+       /* ____________________________________ */
+       {path: 'list-planification',component: ListPlanificationComponent},
+       {path: 'detail-planification/:id',component: DetailPlanificationComponent},
+       {path: 'update-planification/:id',component: UpdatePlanificationComponent},
+       {path: 'addplanification',component: AddplanificationComponent},
+
+       /* _________________________ */
+       {path: 'listrapport',component: ListrapportComponent},
+       {path: 'detailrapport/:id',component: DetailrapportComponent},
+       {path: 'updaterapport/:id',component: UpdaterapportComponent},
+       {path: 'addrapport',component: AddrapportComponent},
+
+
+
+
+
 
 
 

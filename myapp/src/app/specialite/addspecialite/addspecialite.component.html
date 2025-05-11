@@ -1,0 +1,36 @@
+
+
+<!-- [formGroup]="specialiteform" -->
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <form  class="w-50 bg-light p-4 rounded shadow" [formGroup]="specialiteform"(ngSubmit)="addSpecialite()" >
+
+    <div class="form-group">
+      <label for="titre">Nom</label>
+      <input type="text" class="form-control" id="titre"formControlName="nom">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="titre">description</label>
+      <input type="text" class="form-control" id="titre"formControlName="description" >
+    </div>
+    <br>
+
+
+    <div class="form-group">
+      <label for="archive">Archivé</label>
+      <input type="text" class="form-control" id="archive"formControlName="archive"  >
+    </div>
+    <br>
+
+    <div class="form-group text-center">
+      
+
+      <button type="submit" class="btn btn-primary" >Update</button>
+    </div>
+  </form>
+</div>
+
+
+

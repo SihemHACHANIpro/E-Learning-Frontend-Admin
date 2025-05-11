@@ -8,27 +8,24 @@ import { ProgrammeService } from 'src/app/services/programme.service';
   styleUrls: ['./detailsprogramme.component.css']
 })
 export class DetailsprogrammeComponent implements OnInit {
-
-  id!: number;
+  id: any;
   programme: any;
 
-  constructor(private activeroute: ActivatedRoute, private programmeService: ProgrammeService) {}
+  constructor(private activeroute: ActivatedRoute,
+               private programmeService: ProgrammeService) {}
 
-  ngOnInit(): void {
+ngOnInit(): void {
     this.id = this.activeroute.snapshot.params['id'];
     console.log("id programme:", this.id);
     this.getoneProgramme(); // appel réactivé ici
   }
 
-  getoneProgramme(): void {
+getoneProgramme(): void {
     this.programmeService.detailProgramme(this.id).subscribe(
-      (res: any) => {
-        console.log("Détails formation:", res);
-        this.programme = res;
+     (res: any) => {
+      console.log("Détails formation:", res);
+      this.programme = res;
       }
     );
   }
-
-
-   
 }

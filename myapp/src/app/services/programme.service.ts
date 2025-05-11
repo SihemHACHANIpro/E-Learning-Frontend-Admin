@@ -21,6 +21,10 @@ export class ProgrammeService {
     deleteProgramme(id: any) {
       return this.http.delete(`${environment.baseurl}/programme/supprimer/${id}`);
     }
+    archiveProgramme(id: any) {
+      return this.http.put(`${environment.baseurl}/programme/archiver/${id}`, {});
+    }
+
 
 
 
@@ -31,6 +35,11 @@ export class ProgrammeService {
 
 updeteProgramme(id:any,programme:any){
   return this.http.put(`${environment.baseurl}/programme/modification/${id}`,programme)
+}
+
+addProgramme(programme:any){
+  return this.http.post(`${environment.baseurl}/programme/ajouter`,programme)
+
 }
 
 }

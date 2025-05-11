@@ -12,17 +12,26 @@ export class SpecialiteService {
   getAllSpecilite(){
     return this.http.get(`${environment.baseurl}/Specialite/afficherall` )
   }
-
-  /*   getAllSession(){
-            return this.http.get(`${environment.baseurl}/session/aficherall` )
-          }
-
-
-      deleteSession(id: any){
-    return this.http.delete(`${environment.baseurl}/session/supprimer/${id}`)
+  deleteSpecialite(id: any){
+    return this.http.delete(`${environment.baseurl}/Specialite/supprimer/${id}`)
   }
 
-  detailSession(id: any){
-    return this.http.get(`${environment.baseurl}/session/affichagebyid/${id}`)
-  } */
+  detailSpecialite(id: any){
+    return this.http.get(`${environment.baseurl}/Specialite/affichagebyid/${id}`)
+  }
+
+  updateSpecialite(id:any,spcialite:any){
+    return this.http.put(`${environment.baseurl}/Specialite/modification/${id}`,spcialite)
+  }
+
+  addSpecialiye(specialite:any){
+    return this.http.post(`${environment.baseurl}/Specialite/ajouter`,specialite)
+
+  }
+
+  /*
+
+
+
+ */
 }
