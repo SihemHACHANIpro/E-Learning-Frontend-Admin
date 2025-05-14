@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <!-- [formGroup]="utilisateurform" -->
+  <form class="w-50 bg-light p-4 rounded shadow" [formGroup]="utilisateurform">
+
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" class="form-control" id="nom" formControlName="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="prenom">Prénom</label>
+      <input type="text" class="form-control" id="prenom" formControlName="prenom">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label for="motDePass">Mot De Pass</label>
+      <input type="text" class="form-control" id="motDePass" formControlName="motDePass">
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <input type="text" class="form-control" id="role" formControlName="role">
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="archivee">Archivée</label>
+      <select class="form-control form-control-sm" id="archivee" formControlName="archive">
+        <option value="true">Oui</option>
+        <option value="false">Non</option>
+      </select>
+    </div>
+
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary" (click)="updateUtilisateur()">Update</button>
+    </div>
+
+  </form>
+</div>

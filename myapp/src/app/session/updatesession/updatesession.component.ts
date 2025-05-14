@@ -52,14 +52,26 @@ export class UpdatesessionComponent {
     }
 
 
-        updateSession(){
+       /*  updateSession(){
           this.sessionService.updateSession(this.id,this.sessionform.value).subscribe((res:any)=>{
             console.log("Session mis à jour avec succès", res);
             Swal.fire("Session mis à jour avec succès !");
             this.session = res;
-            this.route.navigateByUrl("/detailsession");
+            this.route.navigateByUrl("/listsession'");
 
           })
-        }
+        } */
 
-}
+          updateSession(){
+              this.sessionService. updateSession(this.id, this.sessionform.value).subscribe((res:any)=>{
+                console.log("formation mis a jour avec succés!",res)
+
+                Swal.fire("formation mis à jour avec succès !");
+                this.session = res;
+                this.route.navigateByUrl("/listsession");
+
+
+
+              })
+
+}}

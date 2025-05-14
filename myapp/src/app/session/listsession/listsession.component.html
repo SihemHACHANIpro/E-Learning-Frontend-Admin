@@ -40,7 +40,7 @@
                           <td>{{ session?.dateSession }}</td>
                           <td>{{ session?. lieu}}</td>
                           <td>{{ session?.statut }}</td>
-                          <td>{{ session?.archive }}</td>
+                          <td>{{ session?.archive?'Oui' : 'Non' }}</td>
                           <td><button type="button" class="btn btn-danger" (click)="deleteSession(session.id)">Supprimer</button>
                             &nbsp;&nbsp;
 
@@ -48,6 +48,7 @@
                             &nbsp;&nbsp;
 
                             <button type="button" class="btn btn-warning" [routerLink]="['/updatesession',session.id]">Update</button>
+                            <button type="button" class="btn btn-secondary" (click)="archiveSession(session.id)">Archivée</button>
                           </td>
 
                       </tr>

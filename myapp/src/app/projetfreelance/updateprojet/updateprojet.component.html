@@ -16,24 +16,24 @@
       <input type="text" class="form-control" id="planification" formControlName="planification">
     </div>
 
-    <div class="form-group">
-      <label for="statut">Statut</label>
-      <input type="text" class="form-control" id="statut" formControlName="statut">
-    </div>
+
 
     <div class="form-group">
       <label for="dateDebut">Date Début</label>
-      <input type="text" class="form-control" id="dateDebut" formControlName="dateDebut">
+      <input type="date" class="form-control" id="dateDebut" formControlName="dateDebut">
     </div>
 
     <div class="form-group">
       <label for="dateFin">Date Fin</label>
-      <input type="text" class="form-control" id="dateFin" formControlName="dateFin">
+      <input type="date" class="form-control" id="dateFin" formControlName="dateFin">
     </div>
 
-    <div class="form-group">
-      <label for="archive">Archivé</label>
-      <input type="text" class="form-control" id="archive" formControlName="archive">
+    <div class="form-group mb-3">
+      <label for="archivee">Archivée</label>
+        <select class="form-control form-control-sm" id="archivee" formControlName="archive">
+         <option value="true">Oui</option>
+         <option value="false">Non</option>
+        </select>
     </div>
 
     <div class="form-group text-center mt-3">

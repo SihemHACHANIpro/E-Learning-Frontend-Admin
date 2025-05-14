@@ -50,4 +50,23 @@ constructor(private projetfreeclaneService: ProjetfreelanceService){}
       });
     }
 
+
+    archiveProjet(id:any){
+
+          this.projetfreeclaneService.archiveProjet(id).subscribe((res: any) => {
+              console.log("res.archiveProjet",res);
+
+
+            })
+            Swal.fire({
+               icon: 'success',
+               title: 'ProjetFreelance archivée avec succès',
+               showConfirmButton: false,
+               timer: 1500
+            }).then(()=>{
+              this.getAllProjetfreelance();
+            });
+            }
+
+
 }

@@ -11,13 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class AddspecialiteComponent implements OnInit {
 
-  /* programmeform!:FormGroup
 
-  constructor(private formbuilder: FormBuilder,
-     private programmeservice: ProgrammeService,
-      private route: Router ){}
-
-   */
 specialiteform!:FormGroup
 constructor(private specialiteService: SpecialiteService,
   private formbuilder: FormBuilder,
@@ -55,7 +49,8 @@ constructor(private specialiteService: SpecialiteService,
     }).then(() => {
       this.route.navigateByUrl('/list-specialite');
     });
-    }}
+    }
+  }
 
 
 

@@ -58,14 +58,21 @@ this.projetfreelanceform=this.formbuilder.group({
       );
     }
 
-    updateProjet() {
-      this.projetfreelanceService.updateProjet(this.id, this.projetfreelanceform.value).subscribe((res: any) => {
-        console.log("projetfreelance mis à jour avec succès", res);
-        Swal.fire("projetfreelance mis à jour avec succès !");
-        this.projetfreelance = res;
-        this.route.navigateByUrl("/detailprojet");
-      });
-    }
+
+
+    updateProjet(){
+                   this.projetfreelanceService. updateProjet(this.id, this.projetfreelanceform.value).subscribe((res:any)=>{
+                     console.log("projetfreelance mis a jour avec succés!",res)
+
+                     Swal.fire("projetfreelance  mis à jour avec succès !");
+                     this.projetfreelance= res;
+                     this.route.navigateByUrl("/listprojet");
+
+
+
+                   })
+                 }
+
 
   }
 

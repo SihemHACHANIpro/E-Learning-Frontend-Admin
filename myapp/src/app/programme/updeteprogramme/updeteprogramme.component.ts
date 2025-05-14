@@ -47,12 +47,20 @@ ngOnInit(): void {
     );
   }
 
-updeteProgramme() {
-      this.programmeService.updeteProgramme(this.id, this.programmeform.value).subscribe((res: any) => {
-      console.log("Programme mis à jour avec succès", res);
-      Swal.fire("Programme mis à jour avec succès !");
-      this.programme = res;
-      this.route.navigateByUrl("/detailsprogramme");
-    });
-  }
+
+  updeteProgramme(){
+               this.programmeService.updeteProgramme(this.id, this.programmeform.value).subscribe((res:any)=>{
+                 console.log("Programme mis a jour avec succés!",res)
+
+                 Swal.fire("Programme  mis à jour avec succès !");
+                 this.programme = res;
+                 this.route.navigateByUrl("/listprogramme");
+
+
+
+               })
+             }
+
+
+
 }

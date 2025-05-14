@@ -54,4 +54,23 @@ export class ListsessionComponent implements OnInit {
         });
       }
 
+
+      archiveSession(id:any){
+
+                this.sessionService.archiveSession(id).subscribe((res: any) => {
+                    console.log("res.archiveSession",res);
+
+
+                  })
+                  Swal.fire({
+                     icon: 'success',
+                     title: 'Session archivée avec succès',
+                     showConfirmButton: false,
+                     timer: 1500
+                  }).then(()=>{
+                    this.getAllSession();
+                  });
+                  }
+
+
 }

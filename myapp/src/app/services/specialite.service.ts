@@ -29,9 +29,11 @@ export class SpecialiteService {
 
   }
 
-  /*
 
 
+archiveSpecialite(id: any) {
+  return this.http.put(`${environment.baseurl}/Specialite/archiver/${id}`, {});
+}
 
- */
+
 }

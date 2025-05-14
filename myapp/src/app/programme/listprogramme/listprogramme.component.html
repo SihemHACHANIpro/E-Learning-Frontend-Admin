@@ -41,6 +41,8 @@
                     <td>{{ programme?.archive ? 'Oui' : 'Non' }}</td>
                     <td>
                           <button class="btn btn-danger" (click)="deleteProgramme(programme.id)">Supprimer</button>
+                          <button type="button" class="btn btn-warning" [routerLink]="['/updeteprogramme',programme.id]" >Update</button>
+
                             &nbsp;&nbsp;
                             <button class="btn btn-danger" (click)="archiveProgramme(programme.id)">Archive</button>
                             &nbsp;&nbsp;

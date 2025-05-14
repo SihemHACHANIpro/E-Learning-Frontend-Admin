@@ -31,6 +31,15 @@ import { DetailrapportComponent } from './rapport/detailrapport/detailrapport.co
 import { UpdaterapportComponent } from './rapport/updaterapport/updaterapport.component';
 import { AddrapportComponent } from './rapport/addrapport/addrapport.component';
 import { AddplanificationComponent } from './planification/addplanification/addplanification.component';
+import { ListutilisateurComponent } from './utilisateur/listutilisateur/listutilisateur.component';
+import { ListevenementComponent } from './evenement/listevenement/listevenement.component';
+import { DetailutilisateurComponent } from './utilisateur/detailutilisateur/detailutilisateur.component';
+import { UpdateutilisateurComponent } from './utilisateur/updateutilisateur/updateutilisateur.component';
+import { AddutilisateurComponent } from './utilisateur/addutilisateur/addutilisateur.component';
+import { ListAdministrateurComponent } from './administrateur/list-administrateur/list-administrateur.component';
+import { UpdateadminComponent } from './administrateur/updateadmin/updateadmin.component';
+import { DetailsadminComponent } from './administrateur/detailsadmin/detailsadmin.component';
+import { AddadminComponent } from './administrateur/addadmin/addadmin.component';
 
 
 const routes: Routes = [
@@ -79,8 +88,22 @@ const routes: Routes = [
        {path: 'updaterapport/:id',component: UpdaterapportComponent},
        {path: 'addrapport',component: AddrapportComponent},
 
+       /* ___________________________________ */
+       {path: 'listutilisateur',component: ListutilisateurComponent},
+       {path: 'detailutilisateur/:id',component: DetailutilisateurComponent},
+       {path: 'updateutilisateur/:id',component: UpdateutilisateurComponent},
+       {path: 'addutilisateur',component:AddutilisateurComponent},
 
 
+
+         /* _____________________*/
+           {path: 'listevenement',component: ListevenementComponent},
+
+           /* __________________________ */
+           {path: 'list-administrateur',component: ListAdministrateurComponent},
+           {path: 'updateadmin/:id',component: UpdateadminComponent},
+           {path: 'detailsadmin',component: DetailsadminComponent},
+           {path: 'addadmin',component: AddadminComponent},
 
 
 

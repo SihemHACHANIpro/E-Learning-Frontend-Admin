@@ -4,8 +4,8 @@
      <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
       For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
   <!-- DataTales Example -->
-   <!-- routerLink="/addformation" -->
-      <button type="button" class="btn btn-primary" >Ajouter</button>
+
+      <button type="button" class="btn btn-primary" routerLink="/addrapport" >Ajouter</button>
        &nbsp;&nbsp;
      <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -40,6 +40,7 @@
                        <td>{{ rapport?.competences }}</td>
                        <td>{{ rapport?.formationsuivie}}</td>
                        <td>{{ rapport?.score }}</td>
+                       <td>{{ rapport?.archive?'Oui' : 'Non'}}</td>
 
                       <button  (click)="deleteRapport(rapport.id)" class="btn btn-danger btn-circle">
                            <i class="fas fa-trash"></i></button>
@@ -47,8 +48,10 @@
                            <button type="button" class="btn btn-info btn-circle" [routerLink]="['/detailrapport',rapport.id]">
                             <i class="fas fa-file-alt"></i>
                             </button>
-                            <button type="button" class="btn btn-warning btn-circle" routerLink="/updaterapport"><i class="fas fa-sync-alt text-success"></i>
+                            <button type="button" class="btn btn-warning btn-circle"  [routerLink]="['/updaterapport',rapport.id]"><i class="fas fa-sync-alt text-success"></i>
                             </button>
+
+                            <button type="button" class="btn btn-secondary"(click)="archiveRapport(rapport.id)" >Archivéee</button>
 
                        <td>
 

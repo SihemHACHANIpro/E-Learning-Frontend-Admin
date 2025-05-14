@@ -31,4 +31,9 @@ addSession(session:any){
   return this.http.post(`${environment.baseurl}/session/ajouter`,session)
 }
 
+ archiveSession(id: any) {
+  return this.http.put(`${environment.baseurl}/session/archiver/${id}`, {});
+}
+ 
+
 }

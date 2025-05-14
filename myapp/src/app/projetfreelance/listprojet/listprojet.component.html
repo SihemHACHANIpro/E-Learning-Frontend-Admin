@@ -25,7 +25,6 @@
                       <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 57.2px;">Titre</th>
                       <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 61.2px;">Description</th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49.2px;">planification</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 30.2px;">statut</th>
 
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 68.2px;">DateDebut</th>
                         <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 66.2px;">DateFin </th>
@@ -42,7 +41,7 @@
                         <th rowspan="1" colspan="1">Titre</th>
                         <th rowspan="1" colspan="1">Description </th>
                         <th rowspan="1" colspan="1">planification</th>
-                        <th rowspan="1" colspan="1">Statut  </th>
+
                         <th rowspan="1" colspan="1">DateDebut </th>
                         <th rowspan="1" colspan="1">DateFin </th>
                         <th rowspan="1" colspan="1">Archive </th>
@@ -57,10 +56,11 @@
                           <td>{{projetfreelance?.title}}</td>
                           <td>{{projetfreelance?.description }}</td>
                           <td>{{projetfreelance?.planification}}</td>
-                          <td>{{projetfreelance?.statut}}</td>
+
                           <td>{{projetfreelance?.dateDebut}}</td>
                           <td>{{projetfreelance?.dateFin}}</td>
-                          <td>{{projetfreelance?.archive}}</td>
+                          <td>{{projetfreelance?.archive? 'Oui' : 'Non'}}</td>
+
 
                            <td>
                             <button type="button" class="btn btn-danger"(click)="deleteProjetfreelance(projetfreelance.id)">Supprimer</button>
@@ -69,6 +69,9 @@
                             &nbsp;&nbsp;
 
                             <button type="button" class="btn btn-warning" [routerLink]="['/updateprojet',projetfreelance.id]" >Modification</button>
+
+                            <button type="button" class="btn btn-warning" (click)="archiveProjet(projetfreelance.id)" >Archivée</button>
+
 
                            </td>
 

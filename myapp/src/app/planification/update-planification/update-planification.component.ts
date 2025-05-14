@@ -37,7 +37,7 @@ export class UpdatePlanificationComponent implements OnInit {
   getonePlanification() {
     this.planificationService.detailPlanification(this.id).subscribe((res: any) => {
       console.log("Détails Planification:", res);
-      this.planification = res; 
+      this.planification = res;
       this.planificationform.patchValue({
         date: this.planification.date,
         description: this.planification.description,
@@ -51,7 +51,11 @@ export class UpdatePlanificationComponent implements OnInit {
       console.log("Programme mis à jour avec succès", res);
       Swal.fire("Programme mis à jour avec succès !");
       this.planification = res;
-      this.route.navigateByUrl("/detailsprogramme");
+      this.route.navigateByUrl("/list-planification");
     });
   }
+
+
+
+
 }

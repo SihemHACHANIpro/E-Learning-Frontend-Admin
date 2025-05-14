@@ -15,8 +15,6 @@ constructor(private specialiteService: SpecialiteService){}
     console.log("Spécialité")
     this.getAllSpecialite();
 
-
-
 }
 
 getAllSpecialite(){
@@ -51,5 +49,23 @@ deleteSpecialite(id: any) {
           }
         });
       }
+
+
+      archiveSpecialite(id:any){
+
+            this.specialiteService.archiveSpecialite(id).subscribe((res: any) => {
+                console.log("res.archiveSpecialite",res);
+
+
+              })
+              Swal.fire({
+                 icon: 'success',
+                 title: 'Spécialité archivée avec succès',
+                 showConfirmButton: false,
+                 timer: 1500
+              }).then(()=>{
+                this.getAllSpecialite();
+              });
+              }
 
 }

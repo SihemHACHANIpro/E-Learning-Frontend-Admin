@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 
 export class AddprojetComponent implements OnInit {
      projetfreelanceform!: FormGroup;
+     
      constructor(private route: Router,
      private projetfreelanceService: ProjetfreelanceService,
      private formbuilder: FormBuilder){}

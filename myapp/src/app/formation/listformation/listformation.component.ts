@@ -49,4 +49,38 @@ deleteFormation(id: any) {
       }
     });
   }
-}
+
+  archiveFormation(id:any){
+
+      this.formationService. archiveFormation(id).subscribe((res: any) => {
+          console.log("res. archiveFormation",res);
+
+
+        })
+        Swal.fire({
+           icon: 'success',
+           title: 'Formation archivée avec succès',
+           showConfirmButton: false,
+           timer: 1500
+        }).then(()=>{
+          this.getAllFormation();
+        });
+        }
+
+       /*  archiveFormation(id:any){
+          this.formationService.archiveFormation(id).subscribe((res:any)=>{
+            console.log("res.archiveFormation",res);
+          })
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Formation ajoutée avec succès',
+            showConfirmButton: false,
+            timer: 1500
+         }).then(()=>{
+           this.getAllFormation();
+         });
+         } */
+        }
+
+

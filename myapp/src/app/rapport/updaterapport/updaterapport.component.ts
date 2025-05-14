@@ -56,7 +56,7 @@ export class UpdaterapportComponent implements OnInit {
       console.log("Rapport mis à jour avec succès", res);
       Swal.fire("Rapport mis à jour avec succès !");
       this.rapport = res;
-      this.route.navigateByUrl("/detailrapport");
+      this.route.navigateByUrl("/listrapport");
     });
   }
 }

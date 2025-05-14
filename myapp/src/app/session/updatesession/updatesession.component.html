@@ -3,7 +3,7 @@
 
     <div class="form-group">
       <label for="titre">Date: Session</label>
-      <input type="text" class="form-control" id="titre" formControlName="dateSession">
+      <input type="date" class="form-control" id="titre" formControlName="dateSession">
     </div>
     <br>
 
@@ -17,13 +17,16 @@
       <input type="text" class="form-control" id="titre" formControlName="statut" >
     </div>
     <br>
-<!-- formControlName="archive -->
+
     <div class="form-group">
       <label for="archive">Archivé</label>
-      <input type="text" class="form-control" id="archive" formControlName="archive" >
+      <select class="form-control" id="archive" formControlName="archive">
+        <option [ngValue]="true">Oui</option>
+        <option [ngValue]="false">Non</option>
+      </select>
     </div>
     <br>
-<!-- (click)="updeteProgramme()" -->
+
 <div class="form-group text-center">
   <button type="button" class="btn btn-primary" (click)="updateSession()">Update</button>
 </div>

@@ -27,4 +27,12 @@ updateFormation(id:any,formation:any) {
 addFormation(formation:any){
   return this.http.post(`${environment.baseurl}/formation/ajouter`,formation)
  }
+
+
+ /* ______________ */
+
+ archiveFormation(id: any) {
+  return this.http.put(`${environment.baseurl}/formation/archiver/${id}`, {});
+}
+
 }

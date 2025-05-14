@@ -24,24 +24,33 @@ export class RapportService {
     return this.http.put(`${environment.baseurl}/rapport//modification/${id}`,rapport)
   }
 
+  addRapport(rapport:any){
+    return this.http.post(`${environment.baseurl}/rapport/ajouter`,rapport)
+
+  }
+  archiveRapport(id: any) {
+    return this.http.put(`${environment.baseurl}/rapport/archiver/${id}`, {});
+  }
+
 
 
   /*
 
-    detailProjetfreelance(id: any){
-      return this.http.get(`${environment.baseurl}/projetfreelance/affichagebyid/${id}`)
-    }
-
-    updateProjet(id:any,projetfreelance:any){
-      return this.http.put(`${environment.baseurl}/projetfreelance/modification/${id}`,projetfreelance)
-    }
 
 
-    addProjet(projetfreelance:any){
-      return this.http.post(`${environment.baseurl}/projetfreelance/ajouter`,projetfreelance)
+
+
 
     }
 
 
-  } */
+  }
+
+  archiveFormation(id: any) {
+  return this.http.put(`${environment.baseurl}/formation/archiver/${id}`, {});
+}
+*/
+
+
+
 }

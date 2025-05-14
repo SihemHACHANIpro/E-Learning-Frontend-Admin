@@ -23,6 +23,25 @@ ngOnInit(): void {
       console.log("liste des rapport",this.listrapport)
     })
   }
+ archiveRapport(id:any){
+
+      this.rapportService.archiveRapport(id).subscribe((res: any) => {
+          console.log("res.archiveRapport",res);
+
+
+        })
+        Swal.fire({
+           icon: 'success',
+           title: 'Rapport archivée avec succès',
+           showConfirmButton: false,
+           timer: 1500
+        }).then(()=>{
+          this.getAllRapport();
+        });
+        }
+
+
+
 
   deleteRapport(id: any) {
       Swal.fire({

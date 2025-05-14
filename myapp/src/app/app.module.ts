@@ -44,6 +44,17 @@ import { DetailrapportComponent } from './rapport/detailrapport/detailrapport.co
 import { AddprogrammeComponent } from './programme/addprogramme/addprogramme.component';
 import { AddsessionComponent } from './session/addsession/addsession.component';
 import { AddspecialiteComponent } from './specialite/addspecialite/addspecialite.component';
+import { ListutilisateurComponent } from './utilisateur/listutilisateur/listutilisateur.component';
+import { AddutilisateurComponent } from './utilisateur/addutilisateur/addutilisateur.component';
+import { UpdateutilisateurComponent } from './utilisateur/updateutilisateur/updateutilisateur.component';
+import { DetailutilisateurComponent } from './utilisateur/detailutilisateur/detailutilisateur.component';
+import { ListAdministrateurComponent } from './administrateur/list-administrateur/list-administrateur.component';
+import { ListchefdeprojetComponent } from './chefdeprojet/listchefdeprojet/listchefdeprojet.component';
+import { ListcandidatComponent } from './candidat/listcandidat/listcandidat.component';
+import { ListformateurComponent } from './formateur/listformateur/listformateur.component';
+import { UpdateadminComponent } from './administrateur/updateadmin/updateadmin.component';
+import { DetailsadminComponent } from './administrateur/detailsadmin/detailsadmin.component';
+import { AddadminComponent } from './administrateur/addadmin/addadmin.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +95,18 @@ import { AddspecialiteComponent } from './specialite/addspecialite/addspecialite
     DetailrapportComponent,
     AddprogrammeComponent,
     AddsessionComponent,
-    AddspecialiteComponent
+    AddspecialiteComponent,
+    ListutilisateurComponent,
+    AddutilisateurComponent,
+    UpdateutilisateurComponent,
+    DetailutilisateurComponent,
+    ListAdministrateurComponent,
+    ListchefdeprojetComponent,
+    ListcandidatComponent,
+    ListformateurComponent,
+    UpdateadminComponent,
+    DetailsadminComponent,
+    AddadminComponent
   ],
   imports: [
     BrowserModule,

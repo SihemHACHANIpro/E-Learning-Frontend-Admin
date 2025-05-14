@@ -56,14 +56,18 @@ export class UpdatespecialiteComponent {
   )}
 
 
-   updateSpecialite(){
-            this.specialiteService.updateSpecialite(this.id,this.specialiteform.value).subscribe((res:any)=>{
-              console.log("Specialite mis à jour avec succès", res);
-              Swal.fire("Specialite mis à jour avec succès !");
-              this.specialite = res;
-              this.route.navigateByUrl("/detailsession");
 
-            })
-          }
+ updateSpecialite(){
+               this.specialiteService.updateSpecialite(this.id, this.specialiteform.value).subscribe((res:any)=>{
+                 console.log("Specialite mis a jour avec succés!",res)
+
+                 Swal.fire("Specialite mis à jour avec succès !");
+                 this.specialite = res;
+                 this.route.navigateByUrl("/list-specialite");
+
+
+
+               })
+             }
 
       }

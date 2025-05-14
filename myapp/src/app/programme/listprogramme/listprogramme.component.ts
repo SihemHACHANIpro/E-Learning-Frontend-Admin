@@ -31,7 +31,8 @@ ngOnInit(): void {
     });
   }
 
-  archiveProgramme(id:any){
+
+ archiveProgramme(id:any){
 
       this.programmeService.archiveProgramme(id).subscribe((res: any) => {
           console.log("res.archiveProgramme",res);
@@ -40,14 +41,13 @@ ngOnInit(): void {
         })
         Swal.fire({
            icon: 'success',
-           title: 'Formation ajoutée avec succès',
+           title: 'Programme archivée avec succès',
            showConfirmButton: false,
            timer: 1500
         }).then(()=>{
           this.getAllProgramme();
         });
         }
-
 
 deleteProgramme(id: any) {
     Swal.fire({
@@ -74,6 +74,8 @@ deleteProgramme(id: any) {
     });
   }
 }
+
+
 function deleteProgramme(id: any, any: any) {
   throw new Error('Function not implemented.');
 }

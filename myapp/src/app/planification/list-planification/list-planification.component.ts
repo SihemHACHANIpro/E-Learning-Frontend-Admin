@@ -57,5 +57,20 @@ export class ListPlanificationComponent implements OnInit {
   }
 
 
+  archivePlanification(id:any){
+    this.planificationService.archivePlanification(id).subscribe((res: any) => {
+      console.log("res.archivePlanification", res);
+    });
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Planification archivée avec succès',
+      showConfirmButton: false,
+      timer: 1500
+    }).then(() => {
+      this.getAllPlanification();
+    });
+  }
+
 }
 

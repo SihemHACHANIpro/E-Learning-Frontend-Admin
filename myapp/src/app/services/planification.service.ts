@@ -30,5 +30,8 @@ addPlanification(planification:any){
 
 }
 
-
+ archivePlanification(id: any) {
+  return this.http.put(`${environment.baseurl}/Planification/archiver/${id}`, {});
+}
+ 
 }

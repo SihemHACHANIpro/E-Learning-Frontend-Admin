@@ -31,5 +31,10 @@ export class ProjetfreelanceService {
 
   }
 
+   archiveProjet(id: any) {
+  return this.http.put(`${environment.baseurl}/projetfreelance/archiver/${id}`, {});
+}
+ 
+
 
 }

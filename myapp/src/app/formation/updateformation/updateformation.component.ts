@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormationService } from 'src/app/services/formation.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-updateformation',
@@ -16,7 +17,10 @@ export class UpdateformationComponent {
 
      constructor(
       private activeroute: ActivatedRoute,
-      private formationService: FormationService,private formbuilder:FormBuilder
+      private formationService: FormationService,
+      private formbuilder:FormBuilder,
+      private route: Router
+
     ) {}
 
     ngOnInit(): void {
@@ -64,8 +68,17 @@ export class UpdateformationComponent {
     updateFormation(){
       this.formationService.updateFormation(this.id, this.formationform.value).subscribe((res:any)=>{
         console.log("formation mis a jour avec succés!",res)
+
+        Swal.fire("formation mis à jour avec succès !");
         this.formation = res;
+        this.route.navigateByUrl("/listformation");
+
+
+
       })
     }
+
+
+
 
 }
