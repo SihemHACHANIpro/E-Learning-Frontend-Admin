@@ -1,61 +1,68 @@
-<div class="container-fluid">
 
-  <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-  <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-      For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
 
-  <!-- DataTales Example -->
-  <button type="button" class="btn btn-primary" routerLink="/addsession" >Ajouter</button>
-  &nbsp;&nbsp;
-  <div class="card shadow mb-4">
-      <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-      </div>
-      <div class="card-body">
-          <div class="table-responsive">
-              <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="dataTable_length"><label>Show <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="dataTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
-                  <thead>
-                    <tr>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49.2px;">*</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 30.2px;">DateSession</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 68.2px;">Lieu</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 68.2px;">Statut</th>
-                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 66.2px;">Archive</th>
 
-                      </tr>
-                  </thead>
-                  <tfoot>
-                      <tr><th rowspan="1" colspan="1">*</th>
-                        <th rowspan="1" colspan="1">DateSession</th>
-                        <th rowspan="1" colspan="1">Lieu</th>
-                        <th rowspan="1" colspan="1">Statut</th>
-                        <th rowspan="1" colspan="1">Archive</th>
-                      </tr>
-                  </tfoot>
-                  <tbody>
-                    <!--   <tr *ngFor="let programme of listProgramme; let i = index"> -->
-                     <tr class="even" *ngFor="let session of listSession;let index=index">
-                          <td class="sorting_1">{{ index + 1 }}</td>
-                          <td>{{ session?.dateSession }}</td>
-                          <td>{{ session?. lieu}}</td>
-                          <td>{{ session?.statut }}</td>
-                          <td>{{ session?.archive?'Oui' : 'Non' }}</td>
-                          <td><button type="button" class="btn btn-danger" (click)="deleteSession(session.id)">Supprimer</button>
-                            &nbsp;&nbsp;
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-                            <button type="button" class="btn btn-info" [routerLink]="['/detailsession',session.id]">Détails</button>
-                            &nbsp;&nbsp;
+ <div class="container">
+   <!-- Title and Description -->
+   <div class="mb-4">
+     <h1 class="text-dark">Session</h1>
+     <p class="text-muted">Consultez, recherchez et gérez vos formations à partir de ce tableau dynamique.</p>
+   </div>
 
-                            <button type="button" class="btn btn-warning" [routerLink]="['/updatesession',session.id]">Update</button>
-                            <button type="button" class="btn btn-secondary" (click)="archiveSession(session.id)">Archivée</button>
-                          </td>
+   <!-- Add Button -->
+   <div class="mb-3">
+     <button class="btn btn-primary btn-rounded"  routerLink="/addsession" >
+       <span class="material-icons align-middle" ></span> Ajouter une session
+     </button>
+   </div>
 
-                      </tr>
-                      </tbody>
-              </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="dataTable_previous"><a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="dataTable_next"><a href="#" aria-controls="dataTable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
-          </div>
-      </div>
-  </div>
+   <!-- Table Card -->
+   <div class="card p-3">
+     <div class="table-responsive">
+       <table id="formationTable" class="table table-bordered table-hover align-middle" style="width: 100%;">
+         <thead class="table-light">
+           <tr>
+             <th>#</th>
+             <th>DateSession</th>
+             <th>Lieu</th>
+             <th>Statut</th>
+             <th>Archive</th>
+             <th>Actions</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let session of listSession;let index=index" >
+             <td>{{ index + 1 }}</td>
+             <td>{{ session?.dateSession }}</td>
+             <td >{{ session?. lieu}}</td>
+             <td >{{ session?. statut}}</td>
+             <td><span class="badge bg-success">{{ session?.archive?'Oui' : 'Non' }}</span></td>
 
-</div>
+             <td>
+
+              <button class="btn btn-sm btn-info me-1"[routerLink]="['/detailsession',session.id]">
+                <i class="bi bi-eye"></i>
+              </button>
+
+              <button class="btn btn-sm btn-danger me-1"(click)="deleteSession(session.id)" >
+                <i class="bi bi-trash"></i>
+              </button>
+
+               <button class="btn btn-sm btn-warning me-1"[routerLink]="['/updatesession',session.id]" >
+                 <i class="bi bi-pencil-square"></i>
+               </button>
+
+
+
+               <button class="btn btn-sm btn-secondary" (click)="archiveSession(session.id)">
+                 <i class="bi bi-folder"></i>
+               </button>
+             </td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+ </div>
+

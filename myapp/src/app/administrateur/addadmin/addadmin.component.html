@@ -3,53 +3,45 @@
     <div class="col-md-8">
       <div class="card shadow-sm">
         <div class="card-header bg-primary text-white">
-          <h4 class="mb-0">Ajouter un administrateur</h4>
+          <h4 class="mb-0">Ajouter un Admin</h4>
         </div>
         <div class="card-body">
-        <!--   [formGroup]="formationform" (ngSubmit)="addFormation()"  -->
-
-          <form  [formGroup]="adminform" (ngSubmit)="addAdmin()" >
+          <form [formGroup]="adminform" (ngSubmit)="addAdmin()" >
 
             <div class="mb-3">
               <label for="nom" class="form-label">Nom</label>
               <input type="text" id="nom" class="form-control" formControlName="nom">
             </div>
-
+<!-- _______________________ -->
             <div class="mb-3">
               <label for="prenom" class="form-label">Prénom</label>
-              <input type="text" id="prenom" class="form-control" >
+              <input type="text" id="prenom" class="form-control" formControlName="prenom">
             </div>
-
+<!-- ______________________________ -->
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" class="form-control" >
+              <input type="email" id="email" class="form-control" formControlName="email">
             </div>
-
+<!-- ______________________________ -->
             <div class="mb-3">
               <label for="motDePass" class="form-label">Mot de passe</label>
-              <input type="password" id="motDePass" class="form-control" >
+              <input type="password" id="motDePass" class="form-control" formControlName="motDePass">
             </div>
-
             <div class="mb-3">
-              <label for="role" class="form-label">Rôle</label>
-              <input type="text" id="role" class="form-control" >
+              <label for="specialite" class="form-label">Type</label>
+              <input type="text" id="specialite" class="form-control" formControlName="type">
             </div>
-
-            <div class="mb-3">
-              <label for="type" class="form-label">Type</label>
-              <input type="text" id="type" class="form-control" formControlName="type">
-            </div>
-
+<!-- ______________________________ -->
             <div class="mb-3">
               <label for="archive" class="form-label">Archivée</label>
-              <select id="archive" class="form-select" formControlName="archive" >
+              <select id="archive" class="form-select" formControlName="archive">
                 <option [value]="false">Non</option>
                 <option [value]="true">Oui</option>
               </select>
             </div>
-
+<!-- ____________________________ -->
             <div class="d-grid">
-              <button type="submit" class="btn btn-success">
+              <button type="submit" class="btn btn-success" >
                 <i class="bi bi-plus-circle"></i> Ajouter
               </button>
             </div>
@@ -60,5 +52,3 @@
     </div>
   </div>
 </div>
-
-

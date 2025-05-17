@@ -1,0 +1,50 @@
+
+.bg-custom {
+  background-color: #004369 !important;
+}
+
+.sidebar .nav-link {
+  color: #f8f9fc !important;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #006488 !important;
+  color: #ffffff !important;
+}
+
+.sidebar .nav-item.active .nav-link {
+  background-color: #003a56 !important;
+  color: #ffffff !important;
+}
+
+.sidebar-brand {
+  color: #ffffff !important;
+}
+
+.sidebar-brand:hover {
+  background-color: #003a56 !important;
+  color: #ffffff !important;
+}
+
+.sidebar .nav-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-dark .nav-link.active {
+  color: #ffffff !important;
+  background-color: #005678 !important;
+}
+
+#sidebarToggle {
+  color: #ffffff;
+}
+
+#sidebarToggle:hover {
+  background-color: #003a56;
+  border-color: #003a56;
+}
+

@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Ajouter un chef de projet</h4>
+        </div>
+        <div class="card-body">
+
+          <form [formGroup]="chefdeprojetform" (ngSubmit)="addChefdeprojet()">
+
+            <!-- Champ Nom -->
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" id="nom" class="form-control" formControlName="nom">
+            </div>
+
+            <!-- Champ Prénom -->
+            <div class="mb-3">
+              <label for="prenom" class="form-label">Prénom</label>
+              <input type="text" id="prenom" class="form-control" formControlName="prenom">
+            </div>
+
+            <!-- Champ Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" formControlName="email">
+            </div>
+
+            <!-- Champ Mot de passe -->
+            <div class="mb-3">
+              <label for="motDePass" class="form-label">Mot de passe</label>
+              <input type="password" id="motDePass" class="form-control" formControlName="motDePass">
+            </div>
+
+            <!-- Description Profile -->
+            <div class="mb-3">
+              <label for="descriptionProfile" class="form-label">Description Profile</label>
+              <textarea id="descriptionProfile" class="form-control" rows="4" formControlName="descriptionProfile"></textarea>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="prenom" class="form-label">Role</label>
+              <input type="text" id="prenom" class="form-control" formControlName="role">
+            </div>
+            <!-- Champ Archivée -->
+            <div class="mb-3">
+              <label for="archive" class="form-label">Archivée</label>
+              <select id="archive" class="form-select" formControlName="archive">
+                <option [value]="false">Non</option>
+                <option [value]="true">Oui</option>
+              </select>
+            </div>
+
+            <!-- Bouton soumission -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success" [disabled]="chefdeprojetform.invalid">
+                <i class="bi bi-save"></i> Mettre à jour
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

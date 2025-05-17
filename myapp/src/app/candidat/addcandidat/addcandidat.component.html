@@ -1,0 +1,69 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-header text-white" style="background-color: #004369;">
+          <h4 class="mb-0 text-center">Ajouter un Candidat</h4>
+        </div>
+
+        <div class="card-body">
+
+          <form [formGroup]="candidatform"  (ngSubmit)="addCandidat()">
+
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" id="nom" class="form-control" formControlName="nom">
+            </div>
+
+            <div class="mb-3">
+              <label for="prenom" class="form-label">Prénom</label>
+              <input type="text" id="prenom" class="form-control" >
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" >
+            </div>
+
+            <div class="mb-3">
+              <label for="motDePass" class="form-label">Mot de passe</label>
+              <input type="password" id="motDePass" class="form-control" formControlName="motDePass">
+            </div>
+
+
+            <div class="mb-3">
+              <label for="cin" class="form-label">CIN</label>
+              <input type="text" id="cin" class="form-control" >
+            </div>
+
+        <!-- Rôle -->
+              <div class="mb-3">
+  <label for="role" class="form-label">Rôle</label>
+  <input type="text" id="role" class="form-control" formControlName="role">
+               </div>
+
+
+
+            <div class="mb-3">
+              <label for="archive" class="form-label">Archivée</label>
+              <select id="archive" class="form-select" formControlName="archive" >
+                <option [value]="false">Non</option>
+                <option [value]="true">Oui</option>
+              </select>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i> Ajouter
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

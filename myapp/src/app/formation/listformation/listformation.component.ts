@@ -10,22 +10,22 @@ import Swal from 'sweetalert2';
 export class ListformationComponent implements OnInit {
   listFormation: any;
 
-constructor(private formationService: FormationService) {}
+  constructor(private formationService: FormationService) {}
 
-ngOnInit(): void {
-   console.log("Voici liste formation");
-   this.getAllFormation();
-}
+  ngOnInit(): void {
+    console.log("Voici liste formation");
+    this.getAllFormation();
+  }
 
-// Cette méthode récupère la liste des formations
- getAllFormation() {
-      this.formationService.getAllFormation().subscribe((res: any) => {
+  // Cette méthode récupère la liste des formations
+  getAllFormation() {
+    this.formationService.getAllFormation().subscribe((res: any) => {
       this.listFormation = res;
       console.log("Liste des formations", this.listFormation);
     });
   }
 
-deleteFormation(id: any) {
+  deleteFormation(id: any) {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -37,50 +37,30 @@ deleteFormation(id: any) {
     }).then((result) => {
       if (result.isConfirmed) {
         this.formationService.deleteFormation(id).subscribe((res: any) => {
-         console.log("res delete", res);
-        Swal.fire({
-         title: "Deleted!",
-         text: "Your file has been deleted.",
-         icon: "success"
-         }).then(() => {
+          console.log("res delete", res);
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          }).then(() => {
             this.getAllFormation();
-         });
-       });
+          });
+        });
       }
     });
   }
 
-  archiveFormation(id:any){
-
-      this.formationService. archiveFormation(id).subscribe((res: any) => {
-          console.log("res. archiveFormation",res);
-
-
-        })
-        Swal.fire({
-           icon: 'success',
-           title: 'Formation archivée avec succès',
-           showConfirmButton: false,
-           timer: 1500
-        }).then(()=>{
-          this.getAllFormation();
-        });
-        }
-
-       /*  archiveFormation(id:any){
-          this.formationService.archiveFormation(id).subscribe((res:any)=>{
-            console.log("res.archiveFormation",res);
-          })
-
-          Swal.fire({
-            icon: 'success',
-            title: 'Formation ajoutée avec succès',
-            showConfirmButton: false,
-            timer: 1500
-         }).then(()=>{
-           this.getAllFormation();
-         });
-         } */
-        }
-
-
+  archiveFormation(id: any) {
+    this.formationService.archiveFormation(id).subscribe((res: any) => {
+      console.log("res.archiveFormation", res);
+    });
+    Swal.fire({
+      icon: 'success',
+      title: 'Formation archivée avec succès',
+      showConfirmButton: false,
+      timer: 1500
+    }).then(() => {
+      this.getAllFormation();
+    });
+  }
+}

@@ -55,6 +55,13 @@ import { ListformateurComponent } from './formateur/listformateur/listformateur.
 import { UpdateadminComponent } from './administrateur/updateadmin/updateadmin.component';
 import { DetailsadminComponent } from './administrateur/detailsadmin/detailsadmin.component';
 import { AddadminComponent } from './administrateur/addadmin/addadmin.component';
+import { AddcandidatComponent } from './candidat/addcandidat/addcandidat.component';
+import { AddformateurComponent } from './formateur/addformateur/addformateur.component';
+import { UpdateformateurComponent } from './formateur/updateformateur/updateformateur.component';
+import { DeletachefdeprojetComponent } from './chefdeprojet/deletachefdeprojet/deletachefdeprojet.component';
+import { UpdatechefdeprojrtComponent } from './chefdeprojet/updatechefdeprojrt/updatechefdeprojrt.component';
+import { AddchefdeprojetComponent } from './chefdeprojet/addchefdeprojet/addchefdeprojet.component';
+import { UpdatecandidatComponent } from './candidat/updatecandidat/updatecandidat.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +113,14 @@ import { AddadminComponent } from './administrateur/addadmin/addadmin.component'
     ListformateurComponent,
     UpdateadminComponent,
     DetailsadminComponent,
-    AddadminComponent
+    AddadminComponent,
+    AddcandidatComponent,
+    AddformateurComponent,
+    UpdateformateurComponent,
+    DeletachefdeprojetComponent,
+    UpdatechefdeprojrtComponent,
+    AddchefdeprojetComponent,
+    UpdatecandidatComponent
   ],
   imports: [
     BrowserModule,

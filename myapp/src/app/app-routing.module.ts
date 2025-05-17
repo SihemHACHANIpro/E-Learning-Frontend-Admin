@@ -15,7 +15,6 @@ import { UpdeteprogrammeComponent } from './programme/updeteprogramme/updeteprog
 import { UpdatesessionComponent } from './session/updatesession/updatesession.component';
 import { DetailSpecialiteComponent } from './specialite/detail-specialite/detail-specialite.component';
 import { UpdatespecialiteComponent } from './specialite/updatespecialite/updatespecialite.component';
-import { ProjetfreelanceService } from './services/projetfreelance.service';
 import { ListprojetComponent } from './projetfreelance/listprojet/listprojet.component';
 import { DetailprojetComponent } from './projetfreelance/detailprojet/detailprojet.component';
 import { UpdateprojetComponent } from './projetfreelance/updateprojet/updateprojet.component';
@@ -40,6 +39,16 @@ import { ListAdministrateurComponent } from './administrateur/list-administrateu
 import { UpdateadminComponent } from './administrateur/updateadmin/updateadmin.component';
 import { DetailsadminComponent } from './administrateur/detailsadmin/detailsadmin.component';
 import { AddadminComponent } from './administrateur/addadmin/addadmin.component';
+import { ListcandidatComponent } from './candidat/listcandidat/listcandidat.component';
+import { AddcandidatComponent } from './candidat/addcandidat/addcandidat.component';
+import { ListformateurComponent } from './formateur/listformateur/listformateur.component';
+import { AddformateurComponent } from './formateur/addformateur/addformateur.component';
+import { UpdateformateurComponent } from './formateur/updateformateur/updateformateur.component';
+import { ListchefdeprojetComponent } from './chefdeprojet/listchefdeprojet/listchefdeprojet.component';
+import { UpdatechefdeprojrtComponent } from './chefdeprojet/updatechefdeprojrt/updatechefdeprojrt.component';
+import { AddchefdeprojetComponent } from './chefdeprojet/addchefdeprojet/addchefdeprojet.component';
+import { DeletachefdeprojetComponent } from './chefdeprojet/deletachefdeprojet/deletachefdeprojet.component';
+import { UpdatecandidatComponent } from './candidat/updatecandidat/updatecandidat.component';
 
 
 const routes: Routes = [
@@ -104,6 +113,21 @@ const routes: Routes = [
            {path: 'updateadmin/:id',component: UpdateadminComponent},
            {path: 'detailsadmin',component: DetailsadminComponent},
            {path: 'addadmin',component: AddadminComponent},
+           /* ___________________________ */
+           {path: 'listcandidat',component: ListcandidatComponent},
+           {path: 'addcandidat',component: AddcandidatComponent},
+           {path: 'updatecandidat/:id',component: UpdatecandidatComponent},
+           /* ____________________ */
+           {path: 'listformateur',component: ListformateurComponent},
+           {path: 'addformateur',component: AddformateurComponent},
+           {path: 'updateformateur/:id',component: UpdateformateurComponent},
+           /* ___________________________________________________ */
+
+           {path:'listchefdeprojet',component: ListchefdeprojetComponent},
+           {path:'updatechefdeprojrt/:id',component: UpdatechefdeprojrtComponent},
+           {path:'addchefdeprojet',component: AddchefdeprojetComponent},
+
+
 
 
 

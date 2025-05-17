@@ -1,57 +1,62 @@
-<!-- En-tête de page -->
-<h1 class="h3 mb-2 text-gray-800">Tables</h1>
-  <p class="mb-4">
-        DataTables is a third party plugin. Visit the
-       <a target="_blank" href="https://datatables.net">official documentation</a>.
-  </p>
-<button type="button" class="btn btn-primary" routerLink="/addprogramme" >Ajouter</button>
-&nbsp;&nbsp;
-<!-- Table responsive -->
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-       <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-    </div>
-    <div class="card-body">
-       <div class="table-responsive">
-         <!-- routerLink="/addformation" -->
-          <table class="table table-bordered" width="100%" cellspacing="0">
-             <thead>
-                <tr>
-                 <th>#</th>
-                 <th>Titre</th>
-                 <th>Contenu</th>
-                 <th>Archive</th>
-                 <th>Actions</th>
-                </tr>
-               </thead>
-               <tfoot>
-                 <tr>
-                    <th>#</th>
-                    <th>Titre</th>
-                    <th>Contenu</th>
-                    <th>Archive</th>
-                    <th>Actions</th>
-                  </tr>
-               </tfoot>
-               <tbody>
-                  <tr *ngFor="let programme of listProgramme; let i = index">
-                     <td>{{ i + 1 }}</td>
-                     <td>{{ programme?.titre }}</td>
-                    <td>{{ programme?.contenu }}</td>
-                    <td>{{ programme?.archive ? 'Oui' : 'Non' }}</td>
-                    <td>
-                          <button class="btn btn-danger" (click)="deleteProgramme(programme.id)">Supprimer</button>
-                          <button type="button" class="btn btn-warning" [routerLink]="['/updeteprogramme',programme.id]" >Update</button>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-                            &nbsp;&nbsp;
-                            <button class="btn btn-danger" (click)="archiveProgramme(programme.id)">Archive</button>
-                            &nbsp;&nbsp;
-                          <button class="btn btn-info" [routerLink]="['/detailsprogramme', programme.id]">Détails</button>
-                            &nbsp;&nbsp;
-                      </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-     </div>
+<div class="container">
+  <!-- Title and Description -->
+  <div class="mb-4">
+    <h1 class="text-dark">Programmes</h1>
+    <p class="text-muted">Consultez, recherchez et gérez vos formations à partir de ce tableau dynamique.</p>
+  </div>
+
+  <!-- Add Button -->
+  <div class="mb-3">
+    <button class="btn btn-primary btn-rounded" routerLink="/addprogramme">
+      <span class="material-icons align-middle"></span> Ajouter un Programme
+    </button>
+  </div>
+
+  <!-- Table Card -->
+  <div class="card p-3">
+    <div class="table-responsive">
+      <table id="formationTable" class="table table-bordered table-hover align-middle" style="width: 100%;">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>Titre</th>
+            <th>Contenu</th>
+            <th>Archive</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let programme of listProgramme; let i = index">
+            <!-- Corrected index variable here to match 'i' -->
+            <td>{{ i + 1 }}</td>
+            <td>{{ programme?.titre }}</td>
+            <td class="contenu-cell" [innerHTML]="programme?.contenu"></td>
+
+
+            <td><span class="badge bg-success">{{ programme?.archive ? 'Oui' : 'Non' }}</span></td>
+            <td>
+              <!-- Corrected the syntax for routerLink with space after 'me-1' -->
+              <button class="btn btn-sm btn-info me-1" [routerLink]="['/detailsprogramme', programme.id]">
+                <i class="bi bi-eye"></i>
+              </button>
+
+              <button class="btn btn-sm btn-danger me-1" (click)="deleteProgramme(programme.id)">
+                <i class="bi bi-trash"></i>
+              </button>
+
+              <button class="btn btn-sm btn-warning me-1" [routerLink]="['/updeteprogramme', programme.id]">
+                <i class="bi bi-pencil-square"></i>
+              </button>
+
+              <button class="btn btn-sm btn-secondary" (click)="archiveProgramme(programme.id)">
+                <i class="bi bi-folder"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

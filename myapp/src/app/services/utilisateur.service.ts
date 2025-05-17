@@ -13,9 +13,12 @@ export class UtilisateurService {
     return this.http.get(`${environment.baseurl}/utilisateur/afficherall` )
   }
 
-  deleteUtilisateur(id: any){
+  /* deleteUtilisateur(id: any){
     return this.http.delete(`${environment.baseurl}/utilisateur/supprimer/${id}`)
-  }
+  } */
+    deleteUtilisateur(id: any){
+      return this.http.delete(`${environment.baseurl}/utilisateur/supprimer/${id}`)
+    }
 
   archiveUtilisateur(id: any) {
     return this.http.put(`${environment.baseurl}/utilisateur/archiver/${id}`, {});
@@ -37,7 +40,7 @@ export class UtilisateurService {
 
 
 
-    
+
 
 
 

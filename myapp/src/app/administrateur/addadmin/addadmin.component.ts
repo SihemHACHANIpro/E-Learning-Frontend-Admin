@@ -18,8 +18,13 @@ export class AddadminComponent implements OnInit{
 
   ngOnInit(): void {
     this.adminform=this.formbuilder.group({
-      type:['',Validators.required],
-      archive:['',Validators.required],
+      type: ['', Validators.required],
+      archive: [false, Validators.required], // ✅ par défaut false pour un nouveau formateur
+      nom: ['', Validators.required],
+      prenom: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      motDePass: ['', Validators.required],
+      role: ['Administrateur'] // optionnel si toujours "formateur"
 
     })
   }
@@ -27,7 +32,7 @@ export class AddadminComponent implements OnInit{
 
   addAdmin(){
 
-     this. administrateurService. addAmin(this.adminform.value).subscribe((res:any)=>{
+     this. administrateurService.addAmin(this.adminform.value).subscribe((res:any)=>{
      console.log("res..addAdmin",res)
 
   })
