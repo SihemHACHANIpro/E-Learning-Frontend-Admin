@@ -15,7 +15,7 @@ export class AddformateurComponent implements OnInit {
 
   constructor(
     private formbuilder: FormBuilder,
-    private formateurService: FormateurService, 
+    private formateurService: FormateurService,
     private route: Router
   ) {}
 
@@ -30,9 +30,6 @@ export class AddformateurComponent implements OnInit {
       role: ['formateur'] // optionnel si toujours "formateur"
     });
   }
-
-
-
 
     addFormateur(): void {
       this.formateurService.addFormateur(this.formateurform.value).subscribe({

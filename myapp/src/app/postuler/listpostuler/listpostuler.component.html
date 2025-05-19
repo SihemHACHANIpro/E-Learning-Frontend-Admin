@@ -1,0 +1,72 @@
+
+<!-- ======================== -->
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<div class="container">
+  <!-- Title and Description -->
+  <div class="mb-4">
+    <h1 class="text-dark">Postulet</h1>
+    <p class="text-muted">Consultez, recherchez et gérez vos formations à partir de ce tableau dynamique.</p>
+  </div>
+
+  <!-- Add Button -->
+
+  <div class="mb-3">
+    <button class="btn btn-primary btn-rounded" routerLink="/addpostuler">
+      <span class="material-icons align-middle" ></span> Ajouter une Evenement
+    </button>
+  </div>
+
+  <!-- Table Card -->
+  <div class="card p-3">
+    <div class="table-responsive">
+      <table id="formationTable" class="table table-bordered table-hover align-middle" style="width: 100%;">
+        <thead class="table-light">
+          <tr>
+
+            <th >*</th>
+            <th>contenu</th>
+            <th>inscrireFreelance </th>
+            <th>Archive</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+<!-- *ngFor="let evenement of listevenement; let index = index" -->
+          <tr *ngFor="let postuler of listpostuler; let index = index" >
+                 <td></td>
+                 <td>{{postuler?.inscrireFreelance}}</td>
+                <td class="contenu-cell">{{postuler?.contenu}}</td>
+                <td><span class="badge bg-success">{{ postuler?.archive ? 'Oui' : 'Non' }}</span></td>
+
+
+            <td>
+
+<!-- [routerLink]="['/detailevenement',evenement.id]" -->
+               <button class="btn btn-sm btn-info me-1" >
+                <i class="bi bi-eye"></i>
+              </button>
+
+              <button class="btn btn-sm btn-danger me-1"(click)="deletePostuler(postuler.id)"  >
+                <i class="bi bi-trash"></i>
+              </button>
+
+
+              <button class="btn btn-sm btn-warning me-1" [routerLink]="['/updatepostuler',postuler.id]">
+                <i class="bi bi-pencil-square"></i>
+                <!-- (click)="archiveEvenement(evenement.id)" -->
+              </button>
+              <button class="btn btn-sm btn-secondary"(click)="archivePostuler(postuler.id)"><i class="bi bi-folder"></i></button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+

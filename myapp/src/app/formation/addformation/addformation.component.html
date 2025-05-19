@@ -1,7 +1,8 @@
 
 
 <div class="d-flex justify-content-center align-items-center min-vh-100">
-   <form class="form-container"  [formGroup]="formationform" (ngSubmit)="addFormation()" >
+<!-- [formGroup]="formationform" [formGroup]="formationform" -->
+   <form class="form-container"  >
      <div class="form-group mb-2">
        <label for="titre">Titre</label>
        <input type="text" class="form-control form-control-sm" id="titre" placeholder="Entrez le titre" formControlName="title">
@@ -35,8 +36,8 @@
           <option value="false">Non</option>
          </select>
      </div>
-
-     <button type="button" class="btn btn-primary" routerLink="/listformation">Ajouter</button>&nbsp;&nbsp;
+<!-- routerLink="/listformation" -->
+     <button type="button" class="btn btn-primary" >Ajouter</button>&nbsp;&nbsp;
   </form>
 </div>
 

@@ -1,1 +1,40 @@
-<p>addevenement works!</p>
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <!--     [formGroup]="chefdeprojetform" (ngSubmit)="addChefdeprojet()"-->
+  <form class="w-50 bg-light p-4 rounded shadow"[formGroup]="evenementform" (ngSubmit)="addEvenement()" >
+
+    <div class="form-group">
+      <label for="titre">Titre</label>
+      <input type="text" class="form-control" id="titre" formControlName="titre">
+    </div>
+
+    <div class="form-group">
+      <label for="lieu">Lieu</label>
+      <input type="text" class="form-control" id="lieu" formControlName="lieu">
+    </div>
+
+    <div class="form-group">
+      <label for="dateEvenement">Date</label>
+      <input type="date" class="form-control" id="dateEvenement" formControlName="dateEvenement">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" formControlName="description"></textarea>
+    </div>
+    <br>
+
+    <div class="form-group mb-3">
+      <label for="archivee">Archivée</label>
+      <select class="form-control form-control-sm" id="archivee" formControlName="archive">
+        <option value="true">Oui</option>
+        <option value="false">Non</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary" >Ajouter</button>
+    </div>
+
+  </form>
+</div>

@@ -62,6 +62,12 @@ import { DeletachefdeprojetComponent } from './chefdeprojet/deletachefdeprojet/d
 import { UpdatechefdeprojrtComponent } from './chefdeprojet/updatechefdeprojrt/updatechefdeprojrt.component';
 import { AddchefdeprojetComponent } from './chefdeprojet/addchefdeprojet/addchefdeprojet.component';
 import { UpdatecandidatComponent } from './candidat/updatecandidat/updatecandidat.component';
+import { ListcertificatComponent } from './certificat/listcertificat/listcertificat.component';
+import { AddcertificatComponent } from './certificat/addcertificat/addcertificat.component';
+import { UpdatecertificatComponent } from './certificat/updatecertificat/updatecertificat.component';
+import { ListpostulerComponent } from './postuler/listpostuler/listpostuler.component';
+import { AddpostulerComponent } from './postuler/addpostuler/addpostuler.component';
+import { UpdatepostulerComponent } from './postuler/updatepostuler/updatepostuler.component';
 
 @NgModule({
   declarations: [
@@ -120,14 +126,20 @@ import { UpdatecandidatComponent } from './candidat/updatecandidat/updatecandida
     DeletachefdeprojetComponent,
     UpdatechefdeprojrtComponent,
     AddchefdeprojetComponent,
-    UpdatecandidatComponent
+    UpdatecandidatComponent,
+    ListcertificatComponent,
+    AddcertificatComponent,
+    UpdatecertificatComponent,
+    ListpostulerComponent,
+    AddpostulerComponent,
+    UpdatepostulerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule 
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

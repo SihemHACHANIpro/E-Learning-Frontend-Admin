@@ -49,6 +49,14 @@ import { UpdatechefdeprojrtComponent } from './chefdeprojet/updatechefdeprojrt/u
 import { AddchefdeprojetComponent } from './chefdeprojet/addchefdeprojet/addchefdeprojet.component';
 import { DeletachefdeprojetComponent } from './chefdeprojet/deletachefdeprojet/deletachefdeprojet.component';
 import { UpdatecandidatComponent } from './candidat/updatecandidat/updatecandidat.component';
+import { DetailevenementComponent } from './evenement/detailevenement/detailevenement.component';
+import { UpdateevenementComponent } from './evenement/updateevenement/updateevenement.component';
+import { AddevenementComponent } from './evenement/addevenement/addevenement.component';
+import { ListcertificatComponent } from './certificat/listcertificat/listcertificat.component';
+import { AddcertificatComponent } from './certificat/addcertificat/addcertificat.component';
+import { ListpostulerComponent } from './postuler/listpostuler/listpostuler.component';
+import { AddpostulerComponent } from './postuler/addpostuler/addpostuler.component';
+import { UpdatepostulerComponent } from './postuler/updatepostuler/updatepostuler.component';
 
 
 const routes: Routes = [
@@ -107,6 +115,9 @@ const routes: Routes = [
 
          /* _____________________*/
            {path: 'listevenement',component: ListevenementComponent},
+           { path: 'detailevenement/:id', component: DetailevenementComponent },
+           { path: 'updateevenement/:id', component: UpdateevenementComponent },
+           { path: 'addevenement', component: AddevenementComponent },
 
            /* __________________________ */
            {path: 'list-administrateur',component: ListAdministrateurComponent},
@@ -126,6 +137,18 @@ const routes: Routes = [
            {path:'listchefdeprojet',component: ListchefdeprojetComponent},
            {path:'updatechefdeprojrt/:id',component: UpdatechefdeprojrtComponent},
            {path:'addchefdeprojet',component: AddchefdeprojetComponent},
+
+           /* ________________________________ */
+           {path:'listcertificat',component: ListcertificatComponent},
+           {path:'addcertificat',component: AddcertificatComponent},
+           {path:'updatecertificat',component: UpdatecandidatComponent},
+           /* --------------------------------- */
+
+            {path:'listpostuler',component: ListpostulerComponent},
+            {path:'addpostuler',component: AddpostulerComponent},
+            {path:'updatepostuler/:id',component: UpdatepostulerComponent},
+            /* ________________________________________ */
+
 
 
 
